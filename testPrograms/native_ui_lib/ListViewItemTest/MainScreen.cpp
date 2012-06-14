@@ -47,6 +47,9 @@ MainScreen::MainScreen() :
 	mAddItemButton->addButtonListener(this);
 	mRemoveItemButton->addButtonListener(this);
 	mListView->addListViewListener(this);
+	mSetScrollAuto->addButtonListener(this);
+	mSetScrollDisabled->addButtonListener(this);
+	mSetScrollNormal->addButtonListener(this);
 }
 
 /**
@@ -57,6 +60,9 @@ MainScreen::~MainScreen()
     mAddItemButton->removeButtonListener(NULL);
     mRemoveItemButton->removeButtonListener(NULL);
     mListView->removeListViewListener(this);
+    mSetScrollAuto->removeButtonListener(this);
+    mSetScrollDisabled->removeButtonListener(this);
+    mSetScrollNormal->removeButtonListener(this);
 }
 
 /**
@@ -103,6 +109,19 @@ void MainScreen::createMainLayout() {
 	mRemoveItemButton = new Button();
 	mRemoveItemButton->setText("Remove item");
 	mMainLayout->addChild(mRemoveItemButton);
+
+	// Scroll setting row:
+	HorizontalLayout* scrollSettingLayout = new HorizontalLayout();
+	mMainLayout->addChild(scrollSettingLayout);
+	mSetScrollAuto = new Button();
+	mSetScrollAuto->setText("ScrollAuto");
+	mSetScrollDisabled = new Button();
+	mSetScrollDisabled->setText("ScrollDisabled");
+	mSetScrollNormal = new Button();
+	mSetScrollNormal->setText("ScrollNormal");
+	scrollSettingLayout->addChild(mSetScrollAuto);
+	scrollSettingLayout->addChild(mSetScrollDisabled);
+	scrollSettingLayout->addChild(mSetScrollNormal);
 }
 
 void MainScreen::setItemText(ListViewItem *item, const MAUtil::String &text)
@@ -191,5 +210,17 @@ void MainScreen::buttonClicked(Widget* button)
             mVector.remove(mVector.size() -1);
             mListView->removeChild(item);
         }
+    }
+    else if (button == mSetScrollAuto)
+    {
+		maWidgetSetProperty(mListView->getWidgetHandle(), "ScrollAuto","AUTO");
+    }
+    else if (button == mSetScrollDisabled)
+    {
+		maWidgetSetProperty(mListView->getWidgetHandle(), "ScrollAuto","DISABLED");
+    }
+    else if (button == mSetScrollNormal)
+    {
+		maWidgetSetProperty(mListView->getWidgetHandle(), "ScrollAuto","NORMAL");
     }
 }

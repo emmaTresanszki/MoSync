@@ -145,6 +145,10 @@ private:
 	Button* mRemoveItemButton;
 
 	MAUtil::Vector<Widget*> mVector;
+	// Auto-scroll setting:
+	Button* mSetScrollAuto;
+	Button* mSetScrollDisabled;
+	Button* mSetScrollNormal;
 };
 
 
