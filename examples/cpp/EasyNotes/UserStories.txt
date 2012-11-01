@@ -1,0 +1,34 @@
+EasyNotes User Stories:
+
+1. As a user I want to see a list of all notes.
+	- Create the  main screen of the app (DONE 3h)
+	- Get all entries from a store/file. (3h) + engine: create NoteGroup instance.
+	- Each entry will provide: a title, the last edit time & delete option.(DONE 1h )
+	- Delete all option for all notes, available through optionsMenu.( update store and UI) ( 2h)
+	- Arrange option  av. through optionsMenu. Choices: list/details. For details use segmented list. ( 3h)
+	- New note option that opens a new note with empty fields. ( 1h)
+
+2. ......   be able to open each category in part. There I want to see  and edit the following info:
+		- Editable title, and a back btn. ( DONE 1h)
+		- Al the corresponding notes for that cat/title in a list with editable text views. ( 1h) DONE TODAY!!! + 2h  more on this view.
+		- Update count label when items are added/removed. ( 2h) IN PROGRESS !!!!
+		- Options menu for remove and Discard changes. ( 2h)
+		- When returning to main screen, save all changes to the store/file.  + update list (2h)
+
+3. .....    be able to apply some settings for the entire app,
+		 - Show the settings screen by clicking on a Settings btn on the main page (DONE 1h)
+         - Create the UI(Show no. items check box, Show date modified check box, Text size dialog, text color dialog). (1h) TODO today!!! + 2h dialogs
+		 - When going back to main screen reload the items accrodingly ( 1h) + 1h maybe?
+		 - Save all the settings to a store/file. ( 2h) + add 2h for engine.
+
+some nice to haves: sort by time, color; View grid view.
++ TASK After receiving graphics task 3h to rearrange colors.
++ TASK fix possible bugs on iOS & WP. estimation impossible
+
+
+Note: needed graphics
+	- app icon
+	- Settings button.
+	- app logo for the header in main in screen.
+	- remove icon.
+	- add icon
