@@ -53,7 +53,8 @@ if ENV['MOSYNC_SRC'] == nil
 	ENV['MOSYNC_SRC'] = pwd
 end
 
-scriptPath = "#{ENV['MOSYNC_SRC']}/runtimes/java/platforms/androidJNI"
+#scriptPath = 'cygpath -w "$MOSYNC_SRC/runtimes/java/platforms/androidJNI"'
+scriptPath = "D\:/MoSyncSources/MoSync/runtimes/java/platforms/androidJNI"
 cd scriptPath
 
 #We need two different make files for android due to some restrictions in JNI

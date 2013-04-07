@@ -61,4 +61,5 @@ endif
 
 LOCAL_CFLAGS	+= -DFPM_ARM -Wno-psabi
 
+LOCAL_LDLIBS += -ldl
 include $(BUILD_SHARED_LIBRARY)
